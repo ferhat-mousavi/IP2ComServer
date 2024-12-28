@@ -1,0 +1,29 @@
+// IP2ComServer.idl : type library source for IP2ComServer.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (IP2ComServer.tlb).
+
+[ uuid(BD22D037-9BC7-4160-909F-94E699D793BB), version(1.0) ]
+library IP2ComServer
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  Primary dispatch interface for CIP2ComServerDoc
+	
+	[ uuid(07EC726C-7926-49C3-9D19-96280C1C69BD) ]
+	dispinterface IIP2ComServer
+	{
+		properties:
+			
+		methods:
+	};
+
+	//  Class information for CIP2ComServerDoc
+	
+	[ uuid(608B7C2A-58D9-4ABD-A859-07F49674450D) ]
+	coclass CIP2ComServerDoc
+	{
+		[default] dispinterface IIP2ComServer;
+	};
+};

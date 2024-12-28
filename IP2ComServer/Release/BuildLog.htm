@@ -1,0 +1,163 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=windows-1254">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: IP2ComServer, Configuration: Release|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\BAT00002E.bat" with contents
+[
+@echo off
+echo // Generated Help Map file.  Used by IP2ComServer.hpj. > "hlp\IP2ComServer.hm"
+echo. > "hlp\IP2ComServer.hm"
+echo // Commands (ID_* and IDM_*) >> "hlp\IP2ComServer.hm"
+makehm ID_,HID_,0x10000 IDM_,HIDM_,0x10000 "resource.h" >> "hlp\IP2ComServer.hm"
+echo. >> "hlp\IP2ComServer.hm"
+echo // Prompts (IDP_*) >> "hlp\IP2ComServer.hm"
+makehm IDP_,HIDP_,0x30000 "resource.h" >> "hlp\IP2ComServer.hm"
+echo. >> "hlp\IP2ComServer.hm"
+echo // Resources (IDR_*) >> "hlp\IP2ComServer.hm"
+makehm IDR_,HIDR_,0x20000 "resource.h" >> "hlp\IP2ComServer.hm"
+echo. >> "hlp\IP2ComServer.hm"
+echo // Dialogs (IDD_*) >> "hlp\IP2ComServer.hm"
+makehm IDD_,HIDD_,0x20000 "resource.h" >> "hlp\IP2ComServer.hm"
+echo. >> "hlp\IP2ComServer.hm"
+echo // Frame Controls (IDW_*) >> "hlp\IP2ComServer.hm"
+makehm IDW_,HIDW_,0x50000 "resource.h" >> "hlp\IP2ComServer.hm"
+
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: A tool returned an error code from "Generating map file for help compiler..."
+exit 1
+:VCEnd
+]
+Creating command line ""f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\BAT00002E.bat""
+Creating temporary file "f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\BAT00002F.bat" with contents
+[
+@echo off
+start /wait hcw /C /E /M "hlp\IP2ComServer.hpj"
+if errorlevel 1 goto :HelpError
+if not exist "hlp\IP2ComServer.hlp" goto :HelpError
+if not exist "hlp\IP2ComServer.cnt" goto :HelpError
+echo.
+copy "hlp\IP2ComServer.hlp" "Release"
+copy "hlp\IP2ComServer.cnt" "Release"
+goto :HelpDone
+:HelpError
+echo hlp\IP2ComServer.hpj(1) : error: Problem encountered creating help file
+:HelpDone
+echo.
+
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: A tool returned an error code from "Making help file..."
+exit 1
+:VCEnd
+]
+Creating command line ""f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\BAT00002F.bat""
+Creating temporary file "f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\RSP000030.rsp" with contents
+[
+/D "NDEBUG" /env win32  /tlb "Release/IP2ComServer.tlb" /h "IP2ComServer_h.h"
+".\IP2ComServer.idl"
+]
+Creating command line "midl.exe @"f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\RSP000030.rsp" /nologo"
+Creating temporary file "f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\RSP000031.rsp" with contents
+[
+/O2 /I "M:\LIBRARIES\C++\all_libs\Include" /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /FD /EHsc /MD /GS /Zc:wchar_t /Yu"stdafx.h" /Fp"Release/IP2ComServer.pch" /Fo"Release/" /Fd"Release/vc70.pdb" /W3 /c /Wp64 /Zi /TP
+".\SerialPort.cpp"
+".\MainFrm.cpp"
+".\IP2ComServerView.cpp"
+".\IP2ComServerDoc.cpp"
+".\IP2ComServer.cpp"
+".\Configurations.cpp"
+".\ComPort.cpp"
+]
+Creating command line "cl.exe @"f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\RSP000031.rsp" /nologo"
+Creating temporary file "f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\RSP000032.rsp" with contents
+[
+/O2 /I "M:\LIBRARIES\C++\all_libs\Include" /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /FD /EHsc /MD /GS /Zc:wchar_t /Yc"stdafx.h" /Fp"Release/IP2ComServer.pch" /Fo"Release/" /Fd"Release/vc70.pdb" /W3 /c /Wp64 /Zi /TP
+".\stdafx.cpp"
+]
+Creating command line "cl.exe @"f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\RSP000032.rsp" /nologo"
+Creating command line "rc.exe /d "NDEBUG" /d "_AFXDLL" /l 0x409 /I "Release" /fo"Release/IP2ComServer.res" ".\IP2ComServer.rc""
+Creating temporary file "f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\RSP000033.rsp" with contents
+[
+/OUT:"Release/IP2ComServer.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"M:\LIBRARIES\C++\all_libs\Lib" /DEBUG /PDB:"Release/IP2ComServer.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /MACHINE:X86 vs2_wcs.lib
+".\Release\ComPort.obj"
+".\Release\Configurations.obj"
+".\Release\IP2ComServer.obj"
+".\Release\IP2ComServerDoc.obj"
+".\Release\IP2ComServerView.obj"
+".\Release\MainFrm.obj"
+".\Release\SerialPort.obj"
+".\Release\stdafx.obj"
+".\Release\IP2ComServer.res"
+]
+Creating command line "link.exe @"f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\RSP000033.rsp""
+Creating temporary file "f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\BAT000034.bat" with contents
+[
+@echo off
+"f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\IP2ComServer.exe" /RegServer
+if errorlevel 1 goto VCReportError
+goto VCEnd
+:VCReportError
+echo Project : error PRJ0019: A tool returned an error code from "Performing registration"
+exit 1
+:VCEnd
+]
+Creating command line ""f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\BAT000034.bat""
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Generating map file for help compiler...
+Making help file...
+        1 dosya kopyalandı.
+        1 dosya kopyalandı.
+Creating Type Library...
+Processing .\IP2ComServer.idl
+IP2ComServer.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\oaidl.idl
+oaidl.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objidl.idl
+objidl.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\unknwn.idl
+unknwn.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\wtypes.idl
+wtypes.idl
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\basetsd.h
+basetsd.h
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\guiddef.h
+guiddef.h
+Processing C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\oaidl.acf
+oaidl.acf
+Compiling...
+stdafx.cpp
+Compiling...
+SerialPort.cpp
+MainFrm.cpp
+MainFrm.cpp(545) : warning C4800: 'BOOL' : forcing value to bool 'true' or 'false' (performance warning)
+IP2ComServerView.cpp
+IP2ComServerDoc.cpp
+IP2ComServer.cpp
+Configurations.cpp
+ComPort.cpp
+Generating Code...
+Compiling resources...
+Linking...
+LINK : warning LNK4089: all references to 'OLEAUT32.dll' discarded by /OPT:REF
+vs2_wcs.lib(VS2_ServiceProviderWrapper.obj) : warning LNK4204: 'f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\vc70.pdb' is missing debugging information for referencing module; linking object as if no debug info
+vs2_wcs.lib(VS2Server.obj) : warning LNK4204: 'f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\vc70.pdb' is missing debugging information for referencing module; linking object as if no debug info
+Performing registration
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://f:\Ibm notebook\D\IP2ComServer\IP2ComServer\Release\BuildLog.htm"
+IP2ComServer - 0 error(s), 4 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>
